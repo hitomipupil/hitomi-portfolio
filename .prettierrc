@@ -1,0 +1,15 @@
+{
+  "trailingComma": "none",
+  "tabWidth": 2,
+  "semi": true,
+  "bracketSpacing": true,
+  "overrides": [
+    {
+      "files": ["*.html", "*.css", "*.js", "*.jsx"],
+      "options": {
+        "tabWidth": 4,
+        "useTabs": false
+      }
+    }
+  ]
+}
