@@ -42,7 +42,7 @@ export const WebProjects = [
         id: 5,
         title: "get-dog",
         image: getDog,
-        url: "hitomipupil.github.io/get-dog/",
+        url: "https://hitomipupil.github.io/get-dog/",
         githubUrl: "https://github.com/hitomipupil/get-dog",
         description: "get a dog using dog.ceo"
     }
