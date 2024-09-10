@@ -1,13 +1,12 @@
 import { Box, Link, Typography } from "@mui/material";
+import PropTypes from "prop-types";
 
-const About = () => {
+const About = ({ isMobile }) => {
     return (
         <Box
-            maxWidth="800px"
-            marginTop="150px"
-            marginBottom="100px"
-            marginLeft="130px"
             sx={{
+                margin: isMobile ? "0 10px" : "0 110px",
+                marginBottom: "100px",
                 opacity: 0,
                 animation: "fadeIn 1s ease-in forwards",
                 "@keyframes fadeIn": {
@@ -16,7 +15,9 @@ const About = () => {
                 }
             }}
         >
-            <Typography variant="h1">Hi, I'm Hitomi</Typography>
+            <Typography variant={isMobile ? "h2" : "h1"}>
+                Hi, I'm Hitomi
+            </Typography>
             <Typography variant="h6" marginTop="30px">
                 My journey into web development is a bit unconventional, but
                 it’s one that has shaped my approach to creating meaningful
@@ -116,6 +117,10 @@ const About = () => {
             </Typography>
         </Box>
     );
+};
+
+About.propTypes = {
+    isMobile: PropTypes.bool.isRequired
 };
 
 export default About;

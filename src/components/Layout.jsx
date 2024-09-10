@@ -1,23 +1,33 @@
 import { Outlet, useLocation } from "react-router-dom";
+import PropTypes from "prop-types";
 import Header from "./Header";
 import HomeNav from "./HomeNav";
-import Logo from "./Logo";
 
-const Layout = () => {
+const Layout = ({ isMobile }) => {
     const location = useLocation();
-
     const isHomePage = location.pathname === "/";
 
     return (
         <div>
-            <Logo />
-            {isHomePage ? <HomeNav /> : <Header title="Hi" />}
+            {isHomePage ? (
+                isMobile ? (
+                    <Header isMobile={isMobile} />
+                ) : (
+                    <HomeNav isMobile={isMobile} />
+                )
+            ) : (
+                <Header isMobile={isMobile} />
+            )}
 
             <main>
                 <Outlet />
             </main>
         </div>
     );
+};
+
+Layout.propTypes = {
+    isMobile: PropTypes.bool.isRequired
 };
 
 export default Layout;

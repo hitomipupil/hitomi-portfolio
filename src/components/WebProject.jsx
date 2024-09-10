@@ -29,7 +29,6 @@ const WebProject = () => {
             {WebProjects.length > 0 ? (
                 <Box
                     sx={{
-                        marginTop: "150px",
                         display: "flex",
                         justifyContent: "center",
                         height: "100vh"

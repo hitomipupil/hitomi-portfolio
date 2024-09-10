@@ -2,6 +2,7 @@ import furnitureShop from "./furniture-shop.png";
 import getMovies from "./get-movies.png";
 import todoList from "./todo-list.png";
 import recipes from "./Recipes.png";
+import getDog from "./get-dog.png";
 
 export const WebProjects = [
     {
@@ -36,5 +37,13 @@ export const WebProjects = [
         url: "https://github.com/hitomipupil/Recipes",
         githubUrl: "https://github.com/hitomipupil/Recipes",
         description: "Recipe registering service using Node.js"
+    },
+    {
+        id: 5,
+        title: "get-dog",
+        image: getDog,
+        url: "hitomipupil.github.io/get-dog/",
+        githubUrl: "https://github.com/hitomipupil/get-dog",
+        description: "get a dog using dog.ceo"
     }
 ];

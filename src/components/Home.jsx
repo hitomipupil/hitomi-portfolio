@@ -1,25 +1,33 @@
 import { Box, Typography } from "@mui/material";
+import PropTypes from "prop-types";
 
-const Home = () => {
+const Home = ({ isMobile }) => {
     return (
         <>
             <Box
                 sx={{
                     display: "flex",
                     flexDirection: "column",
-                    justifyContent: "center", // Centers vertically
-                    marginLeft: "10%",
-                    height: "90vh",
-                    padding: 0,
+                    justifyContent: isMobile ? "flex-start" : "center",
+                    alignItems: "flex-start",
+                    width: isMobile ? "100%" : "850px",
+                    height: "100vh",
+                    paddingLeft: isMobile ? "20px" : "60px",
                     opacity: 0,
                     animation: "fadeIn 2s ease-in forwards",
                     "@keyframes fadeIn": {
                         from: { opacity: 0 },
                         to: { opacity: 1 }
+                    },
+                    "@media (min-width: 850px) and (max-width: 1400px)": {
+                        width: "60%"
+                    },
+                    "@media (max-width: 850px)": {
+                        width: "100%"
                     }
                 }}
             >
-                <Box sx={{ maxWidth: "800px" }}>
+                <Box sx={{}}>
                     <Typography variant="h1" color="#011627">
                         Hitomi Yamamoto,
                     </Typography>
@@ -27,13 +35,7 @@ const Home = () => {
                         Web Developer with a Passion for UI/UX
                     </Typography>
                 </Box>
-                <Box
-                    sx={{
-                        maxWidth: "800px",
-                        marginTop: "20px",
-                        marginLeft: "5px"
-                    }}
-                >
+                <Box sx={{}}>
                     <Typography variant="h5" align="left" color="textSecondary">
                         Full Stack Developer with a background in financial
                         service planning and a love for creating seamless
@@ -48,6 +50,10 @@ const Home = () => {
             </Box>
         </>
     );
+};
+
+Home.propTypes = {
+    isMobile: PropTypes.bool.isRequired
 };
 
 export default Home;

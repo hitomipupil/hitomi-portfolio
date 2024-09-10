@@ -3,8 +3,12 @@ import { Box, Link, Typography } from "@mui/material";
 const Contact = () => {
     return (
         <Box
-            style={{ position: "fixed", left: "60px", top: "50%" }}
             sx={{
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center',
+                marginLeft: '5%',
+                height: '70vh',
                 opacity: 0,
                 animation: "fadeIn 1s ease-in forwards",
                 "@keyframes fadeIn": {
@@ -13,10 +17,10 @@ const Contact = () => {
                 }
             }}
         >
-            <Typography variant="h6" color="#011627">
+            <Typography variant="h5" color="#011627">
                 Email: hitomi0727pupil@gmail.com
             </Typography>
-            <Typography variant="h6">
+            <Typography variant="h5">
                 <Link
                     href="https://github.com/hitomipupil"
                     color="textSecondary"

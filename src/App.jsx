@@ -6,16 +6,28 @@ import Art from "./components/Art";
 import Contact from "./components/Contact";
 import Layout from "./components/Layout";
 
+import { useMediaQuery } from "@mui/material";
+
 function App() {
+    const isMobile = useMediaQuery("(max-width:850px)");
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<Layout />}>
-                    <Route index element={<Home />} />
-                    <Route path="about" element={<About />} />
-                    <Route path="web-project" element={<WebProject />} />
-                    <Route path="art" element={<Art />} />
-                    <Route path="contact" element={<Contact />} />
+                <Route path="/" element={<Layout isMobile={isMobile} />}>
+                    <Route index element={<Home isMobile={isMobile} />} />
+                    <Route
+                        path="about"
+                        element={<About isMobile={isMobile} />}
+                    />
+                    <Route
+                        path="web-project"
+                        element={<WebProject isMobile={isMobile} />}
+                    />
+                    <Route path="art" element={<Art isMobile={isMobile} />} />
+                    <Route
+                        path="contact"
+                        element={<Contact isMobile={isMobile} />}
+                    />
                 </Route>
             </Routes>
         </BrowserRouter>

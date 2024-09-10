@@ -4,12 +4,18 @@ import { NavLink } from "react-router-dom";
 const HomeNav = () => {
     return (
         <Box
-            style={{
+            sx={{
                 position: "fixed",
-                right: "10%",
-                top: "50%",
-                transform: "translateY(-50%)",
-                zIndex: 1000
+                right: "60px",
+                top: "50%", // Start from the vertical center
+                transform: "translateY(-50%)", // Center it vertically
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "flex-end", // Align items to the right
+                zIndex: 1000,
+                "@media (min-width: 600px) and (max-width: 1400px)": {
+                    width: "60%"
+                }
             }}
         >
             {[
@@ -39,6 +45,9 @@ const HomeNav = () => {
                         "@keyframes fadeIn": {
                             from: { opacity: 0 },
                             to: { opacity: 1 }
+                        },
+                        "@media (min-width: 600px) and (max-width: 1400px)": {
+                            fontSize: "36px"
                         }
                     }}
                 >
