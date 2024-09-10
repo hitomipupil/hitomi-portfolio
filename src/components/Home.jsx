@@ -42,7 +42,7 @@ const Home = ({ isMobile }) => {
                         digital experiences.
                     </Typography>
                     <Typography variant="h5" align="left" color="textSecondary">
-                        Over the last 8 months, I have immersed myself in full
+                        Over the last 9 months, I have immersed myself in full
                         stack development, gaining hands-on experience with
                         React, Node.js, and more.
                     </Typography>
