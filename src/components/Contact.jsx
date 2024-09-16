@@ -4,17 +4,11 @@ const Contact = () => {
     return (
         <Box
             sx={{
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'center',
-                marginLeft: '5%',
-                height: '70vh',
-                opacity: 0,
-                animation: "fadeIn 1s ease-in forwards",
-                "@keyframes fadeIn": {
-                    from: { opacity: 0 },
-                    to: { opacity: 1 }
-                }
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                marginLeft: "5%",
+                height: "70vh",
             }}
         >
             <Typography variant="h5" color="#011627">

@@ -36,15 +36,9 @@ const HomeNav = () => {
                         fontSize: "64px",
                         color: "#011627",
                         "&:hover": {
-                            transform: "scale(1.2)",
+                            transform: "scale(1.1)",
                             transition: "transform .2s",
                             backgroundColor: "none"
-                        },
-                        opacity: 0,
-                        animation: "fadeIn 2s ease-in forwards",
-                        "@keyframes fadeIn": {
-                            from: { opacity: 0 },
-                            to: { opacity: 1 }
                         },
                         "@media (min-width: 600px) and (max-width: 1400px)": {
                             fontSize: "36px"

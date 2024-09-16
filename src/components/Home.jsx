@@ -1,24 +1,33 @@
 import { Box, Typography } from "@mui/material";
 import PropTypes from "prop-types";
+import logo from "../assets/logo.png";
 
 const Home = ({ isMobile }) => {
     return (
         <>
+            {!isMobile && (
+                <img
+                    src={logo}
+                    alt="logo"
+                    style={{
+                        height: "100px",
+                        width: "auto",
+                        marginTop: "40px",
+                        marginLeft: "40px"
+                    }}
+                />
+            )}
+
             <Box
                 sx={{
                     display: "flex",
                     flexDirection: "column",
                     justifyContent: isMobile ? "flex-start" : "center",
                     alignItems: "flex-start",
-                    width: isMobile ? "100%" : "850px",
-                    height: "100vh",
-                    paddingLeft: isMobile ? "20px" : "60px",
-                    opacity: 0,
-                    animation: "fadeIn 2s ease-in forwards",
-                    "@keyframes fadeIn": {
-                        from: { opacity: 0 },
-                        to: { opacity: 1 }
-                    },
+                    width: isMobile ? "100%" : "900px",
+                    height: "calc(100vh - 140px)",
+                    marginTop: 0,
+                    padding: isMobile ? "0 40px" : "0 60px",
                     "@media (min-width: 850px) and (max-width: 1400px)": {
                         width: "60%"
                     },

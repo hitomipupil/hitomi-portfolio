@@ -7,12 +7,6 @@ const About = ({ isMobile }) => {
             sx={{
                 margin: isMobile ? "0 10px" : "0 110px",
                 marginBottom: "100px",
-                opacity: 0,
-                animation: "fadeIn 1s ease-in forwards",
-                "@keyframes fadeIn": {
-                    from: { opacity: 0 },
-                    to: { opacity: 1 }
-                }
             }}
         >
             <Typography variant={isMobile ? "h2" : "h1"}>

@@ -22,18 +22,18 @@ const Header = ({ isMobile }) => {
     return (
         <Box
             sx={{
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'space-between',
-                margin: '20px',
-                height: '60px',
-                zIndex: 1000,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "space-between",
+                margin: "20px",
+                height: "60px",
+                zIndex: 1000
             }}
         >
             <img
                 src={logo}
                 alt="logo"
-                style={{ height: "50px", width: "auto" }}
+                style={{ height: "50px", width: "auto", margin: "0" }}
             />
 
             {isMobile ? (
@@ -42,11 +42,15 @@ const Header = ({ isMobile }) => {
                         variant="contained"
                         onClick={toggleMenu}
                         sx={{
-                        position:"fixed",
-                        right: "20px",
+                            position: "fixed",
+                            right: "20px",
                             backgroundColor: "#011627",
                             color: "#fff",
-                            marginTop: '10px',
+                            marginTop: "10px",
+                            "&:hover": {
+                                backgroundColor: "#41ead4",
+                                color: "#000"
+                            }
                         }}
                     >
                         Menu
@@ -54,19 +58,19 @@ const Header = ({ isMobile }) => {
                     {menuOpen && (
                         <Box
                             sx={{
-                                display: 'flex',
-                                flexDirection: 'column',
-                                alignItems: 'center',
-                                backgroundColor: '#f7f9fc',
-                                padding: '10px',
-                                borderRadius: '4px',
-                                marginTop: '30px', // Space between button and menu
-                                width: '90%', // Adjust width if needed
-                                boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)',
+                                display: "flex",
+                                flexDirection: "column",
+                                alignItems: "center",
+                                backgroundColor: "#f7f9fc",
+                                padding: "10px",
+                                borderRadius: "4px",
+                                marginTop: "30px", // Space between button and menu
+                                width: "90%", // Adjust width if needed
+                                boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
                                 zIndex: 1400, // Ensure the menu box is above other content
-                                position: 'absolute', // Position the menu relative to the Header
-                                right: '20px',
-                                top: '60px', // Position it below the button
+                                position: "absolute", // Position the menu relative to the Header
+                                right: "20px",
+                                top: "60px" // Position it below the button
                             }}
                         >
                             {menuItems.map((link) => (
@@ -76,11 +80,11 @@ const Header = ({ isMobile }) => {
                                     to={link.path}
                                     onClick={toggleMenu}
                                     sx={{
-                                        textAlign: 'left',
-                                        width: '100%',
+                                        textAlign: "left",
+                                        width: "100%",
                                         "&.active": {
-                                            color: "#41ead4",
-                                        },
+                                            backgroundColor: "#abf6ec"
+                                        }
                                     }}
                                 >
                                     {link.label}
@@ -92,11 +96,11 @@ const Header = ({ isMobile }) => {
             ) : (
                 <Box
                     sx={{
-                        display: 'flex',
-                        flexDirection: 'row',
-                        justifyContent: 'flex-end',
-                        alignItems: 'center',
-                        width: 'auto',
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "flex-end",
+                        alignItems: "center",
+                        width: "auto"
                     }}
                 >
                     {menuItems.map((link) => (
@@ -109,10 +113,13 @@ const Header = ({ isMobile }) => {
                                 fontSize: "24px",
                                 color: "#011627",
                                 "&.active": {
-                                    color: "#41ead4"
+                                    borderBottom: 2,
+                                    borderColor: "#41ead4",
+                                    borderRadius: 0,
+                                    padding: 0
                                 },
                                 padding: "0 15px",
-                                zIndex: '1000',
+                                zIndex: "1000"
                             }}
                         >
                             {link.label}
@@ -125,7 +132,7 @@ const Header = ({ isMobile }) => {
 };
 
 Header.propTypes = {
-    isMobile: PropTypes.bool.isRequired,
+    isMobile: PropTypes.bool.isRequired
 };
 
 export default Header;

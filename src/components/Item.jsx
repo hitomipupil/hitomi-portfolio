@@ -13,12 +13,6 @@ const Item = ({ item }) => {
             sx={{
                 cursor: item.url ? "pointer" : "default",
                 "&:hover": item.url ? { boxShadow: 3 } : {},
-                opacity: 0,
-                animation: "fadeIn 1s ease-in forwards",
-                "@keyframes fadeIn": {
-                    from: { opacity: 0 },
-                    to: { opacity: 1 }
-                }
             }}
         >
             <CardMedia
