@@ -9,8 +9,8 @@ const About = ({ isMobile }) => {
                 flexDirection: "column",
                 alignItems: "flex-start",
                 width: "100%",
-                height: "calc(100vh - 140px)",
                 marginTop: 0,
+                marginBottom: '50px',
                 padding: isMobile ? "0 40px" : "0 60px"
             }}
         >
