@@ -29,7 +29,6 @@ const Projects = ({ isMobile }) => {
             )}
             {webProjects.length > 0 ? (
                 <Box
-                    margin="50px"
                     sx={{
                         display: "flex",
                         justifyContent: "center"

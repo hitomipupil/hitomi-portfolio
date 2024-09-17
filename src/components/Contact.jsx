@@ -1,4 +1,6 @@
 import { Box, Link, Typography } from "@mui/material";
+import { FaGithub } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
 
 const Contact = () => {
     return (
@@ -12,9 +14,9 @@ const Contact = () => {
             }}
         >
             <Typography variant="h5" color="#011627">
-                Email: hitomi0727pupil@gmail.com
+                hitomi0727pupil@gmail.com
             </Typography>
-            <Typography variant="h5">
+            <Typography variant="h4" marginTop="10px">
                 <Link
                     href="https://github.com/hitomipupil"
                     color="textSecondary"
@@ -25,9 +27,8 @@ const Contact = () => {
                     }}
                     underline="none"
                 >
-                    Github
+                    <FaGithub />
                 </Link>
-                /
                 <Link
                     href="https://www.linkedin.com/in/hitomi-yamamoto/"
                     color="textSecondary"
@@ -37,8 +38,9 @@ const Contact = () => {
                         }
                     }}
                     underline="none"
+                    marginLeft="5px"
                 >
-                    LinkedIn
+                    <FaLinkedin />
                 </Link>
             </Typography>
         </Box>

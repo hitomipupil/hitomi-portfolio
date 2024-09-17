@@ -30,11 +30,13 @@ const Header = ({ isMobile }) => {
                 zIndex: 1000
             }}
         >
-            <img
-                src={logo}
-                alt="logo"
-                style={{ height: "50px", width: "auto", margin: "0" }}
-            />
+            <NavLink to="/" style={{ textDecoration: "none" }}>
+                <img
+                    src={logo}
+                    alt="logo"
+                    style={{ height: "50px", width: "auto", margin: "0" }}
+                />
+            </NavLink>
 
             {isMobile ? (
                 <>
@@ -42,14 +44,18 @@ const Header = ({ isMobile }) => {
                         variant="contained"
                         onClick={toggleMenu}
                         sx={{
-                            position: "fixed",
-                            right: "20px",
-                            backgroundColor: "#011627",
-                            color: "#fff",
+                            boxShadow: 0,
+                            right: "5%",
+                            backgroundColor: "inherit",
+                            color: "#000",
                             marginTop: "10px",
                             "&:hover": {
-                                backgroundColor: "#41ead4",
+                                boxShadow: 0,
+                                backgroundColor: "#fff",
                                 color: "#000"
+                            },
+                            "&:active": {
+                                backgroundColor: "#fff"
                             }
                         }}
                     >
@@ -61,16 +67,16 @@ const Header = ({ isMobile }) => {
                                 display: "flex",
                                 flexDirection: "column",
                                 alignItems: "center",
-                                backgroundColor: "#f7f9fc",
+                                backgroundColor: "#fff",
                                 padding: "10px",
                                 borderRadius: "4px",
-                                marginTop: "30px", // Space between button and menu
-                                width: "90%", // Adjust width if needed
+                                marginTop: "30px",
+                                width: "30%",
                                 boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
-                                zIndex: 1400, // Ensure the menu box is above other content
-                                position: "absolute", // Position the menu relative to the Header
+                                zIndex: 1400,
+                                position: "absolute",
                                 right: "20px",
-                                top: "60px" // Position it below the button
+                                top: "60px"
                             }}
                         >
                             {menuItems.map((link) => (

@@ -40,8 +40,8 @@ const Art = ({ isMobile }) => {
     const artWorks = [
         {
             id: 1,
-            title: "bananafish",
-            image: bananafish,
+            title: "eyelid",
+            image: eyelid,
             url: ""
         },
         {
@@ -58,14 +58,14 @@ const Art = ({ isMobile }) => {
         },
         {
             id: 4,
-            title: "couple",
-            image: couple,
+            title: "T-shirts",
+            image: tshirts,
             url: ""
         },
         {
             id: 5,
-            title: "eyelid",
-            image: eyelid,
+            title: "bananafish",
+            image: bananafish,
             url: ""
         },
         {
@@ -127,14 +127,14 @@ const Art = ({ isMobile }) => {
         },
         {
             id: 18,
-            title: "T-shirts",
-            image: tshirts,
+            title: "untitled",
+            image: untitled,
             url: ""
         },
         {
             id: 19,
-            title: "untitled",
-            image: untitled,
+            title: "couple",
+            image: couple,
             url: ""
         }
     ];

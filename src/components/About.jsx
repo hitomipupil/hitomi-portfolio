@@ -5,8 +5,20 @@ const About = ({ isMobile }) => {
     return (
         <Box
             sx={{
-                margin: isMobile ? "0 10px" : "0 110px",
-                marginBottom: "100px"
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: isMobile ? "flex-start" : "center",
+                alignItems: "flex-start",
+                width: isMobile ? "100%" : "900px",
+                height: "calc(100vh - 140px)",
+                marginTop: 0,
+                padding: isMobile ? "0 40px" : "0 60px",
+                "@media (min-width: 850px) and (max-width: 1400px)": {
+                    width: "60%"
+                },
+                "@media (max-width: 850px)": {
+                    width: "100%"
+                }
             }}
         >
             <Typography variant={isMobile ? "h2" : "h1"}>
