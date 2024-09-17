@@ -44,6 +44,7 @@ const Header = ({ isMobile }) => {
                         variant="contained"
                         onClick={toggleMenu}
                         sx={{
+                            fontSize: "20px",
                             boxShadow: 0,
                             right: "5%",
                             backgroundColor: "inherit",
