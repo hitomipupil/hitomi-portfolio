@@ -8,7 +8,7 @@ const Contact = () => {
                 flexDirection: "column",
                 justifyContent: "center",
                 marginLeft: "5%",
-                height: "70vh",
+                height: "70vh"
             }}
         >
             <Typography variant="h5" color="#011627">

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import PropTypes from "prop-types";
 import Loading from "./Loading";
 import { Box, Grid, Typography } from "@mui/material";
 import Item from "./Item";
@@ -22,7 +23,7 @@ import steinbergcolor from "../assets/illustrations/steinberg-color.png";
 import tshirts from "../assets/illustrations/T-shirts.png";
 import untitled from "../assets/illustrations/untitled.png";
 
-const Art = () => {
+const Art = ({ isMobile }) => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(false);
 
@@ -41,116 +42,100 @@ const Art = () => {
             id: 1,
             title: "bananafish",
             image: bananafish,
-            url: "",
-            description: "bananafish"
+            url: ""
         },
         {
             id: 2,
             title: "black-cat",
             image: blackcat,
-            url: "",
-            description: "man and a black cat"
+            url: ""
         },
         {
             id: 3,
             title: "cheek",
             image: cheek,
-            url: "",
-            description: "girl putting finger on her cheek"
+            url: ""
         },
         {
             id: 4,
             title: "couple",
             image: couple,
-            url: "",
-            description: "kawaii couple"
+            url: ""
         },
         {
             id: 5,
             title: "eyelid",
             image: eyelid,
-            url: "",
-            description: "girl with heave eyelid"
+            url: ""
         },
         {
             id: 6,
             title: "green",
             image: green,
-            url: "",
-            description: "girl with a flower"
+            url: ""
         },
-        { id: 7, title: "hand", image: hand, url: "", description: "hand" },
+        { id: 7, title: "hand", image: hand, url: "" },
         {
             id: 8,
             title: "hold",
             image: hold,
-            url: "",
-            description: "hand holding the air"
+            url: ""
         },
         {
             id: 9,
             title: "katie",
             image: katie,
-            url: "",
-            description: "girl with a cigarette"
+            url: ""
         },
-        { id: 10, title: "lynx", image: lynx, url: "", description: "a lynx" },
-        { id: 11, title: "mads", image: mads, url: "", description: "mads" },
+        { id: 10, title: "lynx", image: lynx },
+        { id: 11, title: "mads", image: mads },
         {
             id: 12,
             title: "nana",
             image: nana,
-            url: "",
-            description: "girl with a choker"
+            url: ""
         },
         {
             id: 13,
             title: "orange",
             image: orange,
-            url: "",
-            description: "girl in a hoodie"
+            url: ""
         },
         {
             id: 14,
             title: "pointing",
             image: pointing,
-            url: "",
-            description: "pointing finger"
+            url: ""
         },
         {
             id: 15,
             title: "skater",
             image: skater,
-            url: "",
-            description: "skater"
+            url: ""
         },
         {
             id: 16,
             title: "steniberg",
             image: steinberg,
-            url: "",
-            description: "a model"
+            url: ""
         },
         {
             id: 17,
             title: "steinberg-color",
             image: steinbergcolor,
-            url: "",
-            description: "a model with color"
+            url: ""
         },
         {
             id: 18,
             title: "T-shirts",
             image: tshirts,
-            url: "",
-            description: "girl in  a T-shirts"
+            url: ""
         },
         {
             id: 19,
             title: "untitled",
             image: untitled,
-            url: "",
-            description: "long hair girl"
+            url: ""
         }
     ];
 
@@ -164,16 +149,16 @@ const Art = () => {
             )}
             {artWorks.length > 0 ? (
                 <Box
+                    margin="50px"
                     sx={{
                         display: "flex",
-                        justifyContent: "center",
-                        height: "100vh"
+                        justifyContent: "center"
                     }}
                 >
-                    <Grid container spacing={4} justifyContent="center">
+                    <Grid container spacing={3} justifyContent="center">
                         {artWorks.map((item) => (
                             <Grid item key={item.id}>
-                                <Item item={item} />
+                                <Item item={item} isMobile={isMobile} />
                             </Grid>
                         ))}
                     </Grid>
@@ -183,6 +168,10 @@ const Art = () => {
             )}
         </>
     );
+};
+
+Art.propTypes = {
+    isMobile: PropTypes.bool.isRequired
 };
 
 export default Art;

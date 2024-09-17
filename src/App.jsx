@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
 import About from "./components/About";
-import WebProject from "./components/WebProject";
+import Projects from "./components/Projects";
 import Art from "./components/Art";
 import Contact from "./components/Contact";
 import Layout from "./components/Layout";
@@ -20,8 +20,8 @@ function App() {
                         element={<About isMobile={isMobile} />}
                     />
                     <Route
-                        path="web-project"
-                        element={<WebProject isMobile={isMobile} />}
+                        path="projects"
+                        element={<Projects isMobile={isMobile} />}
                     />
                     <Route path="art" element={<Art isMobile={isMobile} />} />
                     <Route

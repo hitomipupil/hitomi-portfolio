@@ -1,10 +1,11 @@
 import { Box, Grid, Typography } from "@mui/material";
-import { WebProjects } from "../assets/webProjects/WebProjects";
+import { webProjects } from "../assets/webProjects/Projects";
+import PropTypes from "prop-types";
 import Loading from "./Loading";
 import { useEffect, useState } from "react";
 import Item from "./Item";
 
-const WebProject = () => {
+const Projects = ({ isMobile }) => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(false);
 
@@ -26,18 +27,18 @@ const WebProject = () => {
                     Error
                 </Typography>
             )}
-            {WebProjects.length > 0 ? (
+            {webProjects.length > 0 ? (
                 <Box
+                    margin="50px"
                     sx={{
                         display: "flex",
-                        justifyContent: "center",
-                        height: "100vh"
+                        justifyContent: "center"
                     }}
                 >
-                    <Grid container spacing={4} justifyContent="center">
-                        {WebProjects.map((item) => (
+                    <Grid container spacing={3} justifyContent="center">
+                        {webProjects.map((item) => (
                             <Grid item key={item.id}>
-                                <Item item={item} />
+                                <Item item={item} isMobile={isMobile} />
                             </Grid>
                         ))}
                     </Grid>
@@ -49,4 +50,8 @@ const WebProject = () => {
     );
 };
 
-export default WebProject;
+Projects.propTypes = {
+    isMobile: PropTypes.bool.isRequired
+};
+
+export default Projects;

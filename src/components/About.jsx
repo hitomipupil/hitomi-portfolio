@@ -6,7 +6,7 @@ const About = ({ isMobile }) => {
         <Box
             sx={{
                 margin: isMobile ? "0 10px" : "0 110px",
-                marginBottom: "100px",
+                marginBottom: "100px"
             }}
         >
             <Typography variant={isMobile ? "h2" : "h1"}>

@@ -36,21 +36,36 @@ const Home = ({ isMobile }) => {
                     }
                 }}
             >
-                <Box sx={{}}>
-                    <Typography variant="h1" color="#011627">
+                <Box>
+                    <Typography
+                        variant={isMobile ? "h2" : "h1"}
+                        color="#011627"
+                    >
                         Hitomi Yamamoto,
                     </Typography>
-                    <Typography variant="h4" color="#011627">
+                    <Typography
+                        marginTop="10px"
+                        variant={isMobile ? "h5" : "h4"}
+                        color="#011627"
+                    >
                         Web Developer with a Passion for UI/UX
                     </Typography>
                 </Box>
-                <Box sx={{}}>
-                    <Typography variant="h5" align="left" color="textSecondary">
+                <Box marginTop="20px" marginLeft="5px">
+                    <Typography
+                        variant={isMobile ? "h6" : "h5"}
+                        align="left"
+                        color="textSecondary"
+                    >
                         Full Stack Developer with a background in financial
                         service planning and a love for creating seamless
                         digital experiences.
                     </Typography>
-                    <Typography variant="h5" align="left" color="textSecondary">
+                    <Typography
+                        variant={isMobile ? "h6" : "h5"}
+                        align="left"
+                        color="textSecondary"
+                    >
                         Over the last 9 months, I have immersed myself in full
                         stack development, gaining hands-on experience with
                         React, Node.js, and more.

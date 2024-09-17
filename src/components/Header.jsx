@@ -10,7 +10,7 @@ const Header = ({ isMobile }) => {
     const menuItems = [
         { path: "/", label: "Home" },
         { path: "about", label: "About" },
-        { path: "web-project", label: "Web-Project" },
+        { path: "projects", label: "Projects" },
         { path: "art", label: "Art" },
         { path: "contact", label: "Contact" }
     ];
