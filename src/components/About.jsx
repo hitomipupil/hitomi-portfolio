@@ -10,7 +10,7 @@ const About = ({ isMobile }) => {
                 alignItems: "flex-start",
                 width: "100%",
                 marginTop: 0,
-                marginBottom: '50px',
+                marginBottom: "50px",
                 padding: isMobile ? "0 40px" : "0 60px"
             }}
         >
@@ -25,7 +25,7 @@ const About = ({ isMobile }) => {
             <Typography variant="h4" marginTop="30px">
                 From Japan to Belgium: My Journey
             </Typography>
-            <Typography variant="h6">
+            <Typography variant="h6" marginTop="10px">
                 I started my professional life in Japan, where I earned a degree
                 in International Political Science and Economics.
             </Typography>
@@ -60,7 +60,7 @@ const About = ({ isMobile }) => {
             <Typography variant="h4" marginTop="30px">
                 A New Chapter in Belgium
             </Typography>
-            <Typography variant="h6">
+            <Typography variant="h6" marginTop="10px">
                 In 2023, I made a big life change. I moved to Belgium to live
                 with my partner, leaving behind my job and the familiar
                 surroundings of Japan. This move gave me the opportunity to
@@ -78,7 +78,7 @@ const About = ({ isMobile }) => {
             <Typography variant="h4" marginTop="30px">
                 My Approach to Web Development
             </Typography>
-            <Typography variant="h6">
+            <Typography variant="h6" marginTop="10px">
                 Whenever I approach a web development project, I think back to
                 my time at NTT Docomo. My boss always emphasized the importance
                 of thinking from the user’s perspective, and that advice has
@@ -96,7 +96,7 @@ const About = ({ isMobile }) => {
             <Typography variant="h4" marginTop="30px">
                 Looking Ahead
             </Typography>
-            <Typography variant="h6">
+            <Typography variant="h6" marginTop="10px">
                 As I continue on this path, I’m excited to deepen my knowledge
                 of front-end technologies and UI/UX design. I’m also eager to
                 learn more about backend development with tools like Node.js,
@@ -107,7 +107,7 @@ const About = ({ isMobile }) => {
             <Typography variant="h4" marginTop="30px">
                 A Blend of Passions
             </Typography>
-            <Typography variant="h6">
+            <Typography variant="h6" marginTop="10px">
                 Outside of coding, I’m passionate about digital illustration. I
                 love experimenting with different styles and techniques, and I
                 believe this creativity influences my work as a developer. You

@@ -147,6 +147,19 @@ const Art = ({ isMobile }) => {
                     Error
                 </Typography>
             )}
+            <Typography
+                variant="body1"
+                color="textSecondary"
+                sx={{
+                    marginBottom: "20px",
+                    textAlign: "center",
+                    marginX: "20px"
+                }}
+            >
+                Web development is where I build, but illustration is where I
+                dream. Creativity flows through both, whether in code or on
+                canvas.
+            </Typography>
             {artWorks.length > 0 ? (
                 <Box
                     margin="50px"
